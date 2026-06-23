@@ -5,7 +5,19 @@ import tensorflow as tf
 
 st.title("MNIST Digit Classifier")
 
+canvas_result = st_canvas(
+    stroke_width=10,
+    stroke_color="white",
+    background_color="black",
+    height=280,
+    width=280,
+    drawing_mode="freedraw",
+)
+
+if canvas_result.image_data is not None:
+    st.image(canvas_result.image_data)
 @st.cache_resource
+
 def load_model():
     return tf.keras.models.load_model("mnist_model.keras")
 
