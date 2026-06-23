@@ -1,6 +1,5 @@
 streamlit
 tensorflow-cpu==2.19.0
-streamlit-drawable-canvas
 numpy
 pillow
 h5py
